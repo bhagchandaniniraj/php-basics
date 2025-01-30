@@ -1,4 +1,4 @@
-`# PHP Calculator with Constructor
+# PHP Calculator with Constructor
 
 A simple PHP calculator program that allows users to perform basic arithmetic operations (addition, subtraction, multiplication, and division) using a constructor. The program accepts two numbers and an operation through an HTML form and directly calculates the result upon creating the `Calculator` object.
 
