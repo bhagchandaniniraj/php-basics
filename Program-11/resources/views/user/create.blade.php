@@ -14,9 +14,7 @@
     </div>
     <div class="form-group">
         <label for="Content">Content</label>
-        <div name="content" id="editor">
-            <p>Hello from CKEditor 5!</p>
-        </div>
+        <textarea name="content" contenteditable="true" id="editor" cols="30" rows="10"></textarea>
       </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

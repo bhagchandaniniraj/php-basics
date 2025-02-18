@@ -24,10 +24,10 @@
             Font,
             Paragraph
         } = CKEDITOR;
-
+        CKEDITOR.env.isCompatible = true;
         ClassicEditor
             .create( document.querySelector( '#editor' ), {
-                licenseKey: '<YOUR_LICENSE_KEY>',
+                licenseKey: 'GPL',
                 plugins: [ Essentials, Bold, Italic, Font, Paragraph ],
                 toolbar: [
                     'undo', 'redo', '|', 'bold', 'italic', '|',

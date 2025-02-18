@@ -37,10 +37,6 @@ class BlogController extends Controller
         $b->user_id = rand(1,5);
         $b->save();
         return redirect()->route('blog.index');
-
-
-
-
     }
 
     /**
@@ -72,6 +68,7 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        $blog->delete();
+        return redirect()->route('blog.index');
     }
 }
