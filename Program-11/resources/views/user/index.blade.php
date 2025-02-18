@@ -16,7 +16,11 @@
                     <td>{{$posts->id}}</td>
                     <td>{{$posts->title}}</td>
                     <td>Edit</td>
-                    <td>Delete</td>
+                    <td><form action="{{ route('blog.destroy', $posts->id)}}" method="post">
+                            @csrf
+                            @method('delete')
+                            <input type="submit" value="Delete Me!!!" class="btn btn-warning">
+                        <form></td>
                 </tr>
         @endforeach
     </tbody>
