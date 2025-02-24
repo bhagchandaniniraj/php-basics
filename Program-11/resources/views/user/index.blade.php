@@ -14,12 +14,12 @@
         @foreach($arr as $posts)
                 <tr>
                     <td>{{$posts->id}}</td>
-                    <td>{{$posts->title}}</td>
-                    <td>Edit</td>
+                    <td><a href="{{route('blog.show', $posts->id)}}">{{$posts->title}}</a></td>
+                    <td><a href="{{route('blog.edit', $posts->id)}}" class="btn btn-warning">Edit</a></td>
                     <td><form action="{{ route('blog.destroy', $posts->id)}}" method="post">
                             @csrf
                             @method('delete')
-                            <input type="submit" value="Delete Me!!!" class="btn btn-warning">
+                            <input type="submit" value="Delete Me!!!" class="btn btn-danger">
                         <form></td>
                 </tr>
         @endforeach
