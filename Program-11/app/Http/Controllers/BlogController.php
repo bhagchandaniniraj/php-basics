@@ -44,7 +44,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        //
+        return view('user.show', compact('blog'));
     }
 
     /**
@@ -52,7 +52,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        return view('user.edit', compact('blog'));
     }
 
     /**
@@ -60,7 +60,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+
     }
 
     /**
