@@ -3,8 +3,9 @@
 @section('content')
 <h1>Edit your blog post here....</h1>
 
-<form method="post" action="{{ route('blog.store') }}">
+<form method="post" action="{{ route('blog.update', $blog->id) }}">
     @csrf
+    @method('put')
     <div class="form-group">
       <label for="Title">Title</label>
       <input type="text" name="title" value="{{$blog->title}}" class="form-control" id="exampleInputEmail1" placeholder="Enter Title">
