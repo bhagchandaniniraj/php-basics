@@ -31,11 +31,11 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $b = new Blog();
-        $b->title = $request->title;
-        $b->subtitle = $request->subtitle;
-        $b->content = $request->content;
-        $b->user_id = rand(1,5);
-        $b->save();
+        // $b->title = $request->title;
+        // $b->subtitle = $request->subtitle;
+        // $b->content = $request->content;
+        // $b->user_id = rand(1,5);
+        // $b->save();
         return redirect()->route('blog.index');
     }
 
@@ -60,7 +60,12 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-
+        $blog->title = $request->title;
+        $blog->subtitle = $request->subtitle;
+        $blog->content = $request->content;
+        $blog->user_id = rand(1,5);
+        $blog->save();
+        return redirect()->route('blog.index');
     }
 
     /**
