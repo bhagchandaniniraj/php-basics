@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
         <label for="Content">Content</label>
-        <textarea name="content" contenteditable="true" id="editor" cols="30" rows="10"></textarea>
+        <textarea name="content" contenteditable="true" cols="30" rows="10"></textarea>
       </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
