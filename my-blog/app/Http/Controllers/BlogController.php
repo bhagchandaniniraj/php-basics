@@ -31,11 +31,13 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $b = new Blog();
-        $b->title = $request->title;
-        $b->subtitle = $request->subtitle;
-        $b->content = $request->content;
-        $b->user_id = rand(1,5);
-        $b->save();
+        $request ['user_id'] = rand(1,5);
+        Blog::create($request->all());
+        // $b->title = $request->title;
+        // $b->subtitle = $request->subtitle;
+        // $b->content = $request->content;
+        // $b->user_id = rand(1,5);
+        //$b->save();
         return redirect()->route('blog.index');
     }
 
